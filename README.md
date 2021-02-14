@@ -43,7 +43,7 @@ If you _do not_ have a `projectId`:
     * Create new project — Hit Enter. 
     * Your project name: — We can name it whatever we would like. Let’s use **studio** for this project. 
     * Use the default dataset configuration? — The default dataset configuration has a public dataset named "production", let's stick with that. So type in "Y" and hit Enter. 
-    * Project output path: — This will show us the path where our sanity project will live. The path should show the path that leads to this: /sanity-react/mysanityblog. Hit Enter. 
+    * Project output path: — This will show us the path where our sanity project will live. Hit Enter. 
     * Select project template: — Here we are going to choose Blog (schema). Using the arrow keys, navigate to that so it’s showing blue. Hit Enter once there. Success!
 - Add new `projectId` to `src/client.js` (detailed instructions below)
 - Run `sanity start`
