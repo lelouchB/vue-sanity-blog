@@ -51,7 +51,7 @@ If you _do not_ have a `projectId`:
 
 ## Sanity Management
 
-Connecting the React app and Sanity project can be done with the following steps:
+Connecting the Vue.js app and Sanity project can be done with the following steps:
 
 - Navigate to [manage.sanity.io](https://manage.sanity.io/)
 - Click on the name of your project (name was created during `sanity init`)
