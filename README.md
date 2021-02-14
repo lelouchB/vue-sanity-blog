@@ -1,6 +1,6 @@
 [![Preview](https://i.imgur.com/cT0huFG.png)](https://vuesanity.netlify.app/)
 
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3436f69e-fc08-478a-9e82-7852461a0eb0/deploy-status)](https://app.netlify.com/sites/vuesanity/deploys)
 ## Vue Project setup
 ```
 npm install
