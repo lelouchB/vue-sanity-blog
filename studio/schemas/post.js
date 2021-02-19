@@ -22,7 +22,7 @@ export default {
       title: "Description",
       type: "string",
       options: {
-        maxLenght: 200,
+        maxLength: 200,
       },
     },
     {
