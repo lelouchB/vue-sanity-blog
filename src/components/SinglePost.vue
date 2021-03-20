@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <div class="loading" v-if="loading">Loading...</div>
@@ -11,14 +12,14 @@
       <img v-if="post.image" :src="imageUrlFor(post.image).width(480)" />
 
       <h6>By: {{ post.name }}</h6>
-      <div v-html="bodyHtml" class="post" />
+      <SanityBlocks :blocks="blocks" />
     </div>
   </div>
 </template>
 
 <script>
+import { SanityBlocks } from "sanity-blocks-vue-component";
 import sanity from "../client";
-import blocksToHtml from "@sanity/block-content-to-html";
 import imageUrlBuilder from "@sanity/image-url";
 
 const imageBuilder = imageUrlBuilder(sanity);
@@ -41,10 +42,12 @@ const query = `*[slug.current == $slug] {
 
 export default {
   name: "SinglePost",
+  components: { SanityBlocks },
   data() {
     return {
       loading: true,
       post: [],
+      blocks: [],
     };
   },
   created() {
@@ -62,11 +65,7 @@ export default {
         (post) => {
           this.loading = false;
           this.post = post;
-          this.bodyHtml = blocksToHtml({
-            blocks: post.body,
-            dataset: sanity.dataset,
-            projectId: sanity.projectId,
-          });
+          this.blocks = post.body;
         },
         (error) => {
           this.error = error;
